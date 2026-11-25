@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:   3%|▎         | 12/389 [00:00<00:04, 80.70it/s]Loading weights:   5%|▌         | 21/389 [00:00<00:07, 51.91it/s]Loading weights:   7%|▋         | 28/389 [00:00<00:06, 56.06it/s]Loading weights:  10%|▉         | 37/389 [00:00<00:05, 61.80it/s]Loading weights:  12%|█▏        | 45/389 [00:00<00:07, 44.91it/s]Loading weights:  13%|█▎        | 51/389 [00:01<00:08, 38.26it/s]Loading weights:  14%|█▍        | 56/389 [00:01<00:08, 40.23it/s]Loading weights:  16%|█▌        | 61/389 [00:01<00:08, 37.14it/s]Loading weights:  17%|█▋        | 66/389 [00:01<00:13, 24.75it/s]Loading weights:  18%|█▊        | 70/389 [00:01<00:13, 22.91it/s]Loading weights:  19%|█▉        | 73/389 [00:02<00:13, 23.85it/s]Loading weights:  20%|█▉        | 76/389 [00:02<00:16, 18.86it/s]Loading weights:  23%|██▎       | 88/389 [00:02<00:08, 34.64it/s]Loading weights:  24%|██▍       | 93/389 [00:02<00:08, 36.38it/s]Loading weights:  25%|██▌       | 98/389 [00:02<00:07, 38.56it/s]Loading weights:  26%|██▋       | 103/389 [00:02<00:07, 36.30it/s]Loading weights:  28%|██▊       | 109/389 [00:02<00:06, 40.32it/s]Loading weights:  29%|██▉       | 114/389 [00:03<00:07, 38.92it/s]Loading weights:  31%|███       | 119/389 [00:03<00:06, 38.78it/s]Loading weights:  32%|███▏      | 126/389 [00:03<00:05, 44.42it/s]Loading weights:  36%|███▌      | 141/389 [00:03<00:03, 62.88it/s]Loading weights:  38%|███▊      | 148/389 [00:03<00:04, 57.02it/s]Loading weights:  40%|███▉      | 154/389 [00:03<00:04, 55.33it/s]Loading weights:  88%|████████▊ | 344/389 [00:03<00:00, 498.82it/s]Loading weights: 100%|██████████| 389/389 [00:03<00:00, 99.84it/s] 
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+pooler.dense.weight       | MISSING    | 
+pooler.dense.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/389 [00:00<00:08, 44.33it/s]Loading weights:   3%|▎         | 11/389 [00:00<00:11, 32.12it/s]Loading weights:   4%|▍         | 15/389 [00:00<00:13, 28.13it/s]Loading weights:   5%|▍         | 18/389 [00:00<00:13, 26.78it/s]Loading weights:   5%|▌         | 21/389 [00:00<00:13, 26.66it/s]Loading weights:   8%|▊         | 30/389 [00:00<00:08, 42.84it/s]Loading weights:   9%|▉         | 35/389 [00:01<00:09, 36.63it/s]Loading weights:  10%|█         | 40/389 [00:01<00:10, 32.42it/s]Loading weights:  12%|█▏        | 45/389 [00:01<00:09, 35.05it/s]Loading weights:  14%|█▍        | 55/389 [00:01<00:07, 46.76it/s]Loading weights:  15%|█▌        | 60/389 [00:01<00:07, 46.25it/s]Loading weights:  17%|█▋        | 65/389 [00:01<00:08, 38.87it/s]Loading weights:  18%|█▊        | 71/389 [00:01<00:07, 42.31it/s]Loading weights:  20%|█▉        | 76/389 [00:02<00:07, 39.90it/s]Loading weights:  21%|██        | 82/389 [00:02<00:07, 41.02it/s]Loading weights:  22%|██▏       | 87/389 [00:02<00:08, 37.46it/s]Loading weights:  25%|██▍       | 97/389 [00:02<00:06, 47.78it/s]Loading weights:  26%|██▌       | 102/389 [00:02<00:08, 35.26it/s]Loading weights:  28%|██▊       | 109/389 [00:02<00:07, 39.44it/s]Loading weights:  30%|██▉       | 116/389 [00:02<00:06, 44.35it/s]Loading weights:  31%|███       | 121/389 [00:03<00:06, 44.62it/s]Loading weights:  32%|███▏      | 126/389 [00:03<00:06, 43.34it/s]Loading weights:  34%|███▍      | 132/389 [00:03<00:05, 45.79it/s]Loading weights:  35%|███▌      | 137/389 [00:03<00:06, 38.75it/s]Loading weights:  39%|███▉      | 153/389 [00:03<00:03, 61.87it/s]Loading weights:  41%|████      | 160/389 [00:03<00:04, 56.79it/s]Loading weights: 100%|██████████| 389/389 [00:03<00:00, 101.33it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+pooler.dense.weight       | MISSING    | 
+pooler.dense.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.

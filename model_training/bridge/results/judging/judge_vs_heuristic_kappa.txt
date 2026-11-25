@@ -1,0 +1,2 @@
+n=48 agreement=0.979 kappa=0.958 claude_yes=21 heuristic_yes=22
+disagreements (item#, claude, heuristic): [(43, 0, 1)]

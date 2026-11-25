@@ -1,0 +1,11 @@
+ESConv test: majority-class (always-predict-majority) acc = 0.583; gold perfect rate = 0.583
+sft_mix0.02 vs sft_mix0: ESConv perfect-acc diff -0.011 [-0.019,-0.002] SIGNIFICANT | goal detection diff +0.008 [-0.019,+0.033] n.s.
+sft_mix0.05 vs sft_mix0: ESConv perfect-acc diff -0.011 [-0.021,-0.002] SIGNIFICANT | goal detection diff +0.056 [+0.008,+0.119] SIGNIFICANT
+sft_mix0.10 vs sft_mix0: ESConv perfect-acc diff -0.011 [-0.020,-0.002] SIGNIFICANT | goal detection diff +0.169 [+0.081,+0.264] SIGNIFICANT
+orig_all vs sft_mix0: ESConv perfect-acc diff +0.016 [+0.007,+0.026] SIGNIFICANT | goal detection diff -0.044 [-0.121,+0.011] n.s.
+llama_mix0.10 vs llama_mix0: ESConv perfect-acc diff +0.001 [-0.009,+0.012] n.s. | goal detection diff +0.256 [+0.150,+0.368] SIGNIFICANT
+ESConv test: majority-class (always-predict-majority) acc = 0.583; gold perfect rate = 0.583
+sft_mix0.10 vs sft_mix0: ESConv perfect-acc diff -0.011 [-0.020,-0.002] SIGNIFICANT | goal detection diff +0.169 [+0.081,+0.264] SIGNIFICANT
+seq_noreplay vs sft_mix0: ESConv perfect-acc diff -0.085 [-0.107,-0.063] SIGNIFICANT | goal detection diff +0.033 [-0.047,+0.119] n.s.
+seq_replay1000 vs sft_mix0: ESConv perfect-acc diff -0.016 [-0.025,-0.007] SIGNIFICANT | goal detection diff +0.103 [+0.039,+0.182] SIGNIFICANT
+seq_replay1000 vs sft_mix0.10: ESConv perfect-acc diff -0.005 [-0.016,+0.007] n.s. | goal detection diff -0.067 [-0.155,+0.006] n.s.

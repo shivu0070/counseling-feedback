@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:   2%|▏         | 7/389 [00:00<00:05, 65.25it/s]Loading weights:   6%|▌         | 22/389 [00:00<00:04, 78.45it/s]Loading weights:   8%|▊         | 30/389 [00:00<00:04, 73.94it/s]Loading weights:  10%|█         | 39/389 [00:00<00:04, 76.26it/s]Loading weights:  12%|█▏        | 47/389 [00:00<00:06, 50.30it/s]Loading weights:  14%|█▎        | 53/389 [00:00<00:07, 43.31it/s]Loading weights:  15%|█▍        | 58/389 [00:01<00:11, 28.18it/s]Loading weights:  16%|█▌        | 62/389 [00:01<00:11, 28.17it/s]Loading weights:  17%|█▋        | 66/389 [00:01<00:10, 30.15it/s]Loading weights:  19%|█▉        | 74/389 [00:01<00:07, 39.47it/s]Loading weights: 100%|██████████| 389/389 [00:01<00:00, 214.00it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+pooler.dense.weight       | MISSING    | 
+pooler.dense.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:   1%|▏         | 5/389 [00:00<00:09, 41.74it/s]Loading weights:   3%|▎         | 10/389 [00:00<00:10, 34.77it/s]Loading weights:  13%|█▎        | 50/389 [00:00<00:02, 143.41it/s]Loading weights:  20%|█▉        | 76/389 [00:00<00:02, 151.71it/s]Loading weights:  24%|██▎       | 92/389 [00:00<00:02, 101.83it/s]Loading weights:  27%|██▋       | 104/389 [00:01<00:03, 92.05it/s]Loading weights:  30%|███       | 118/389 [00:01<00:02, 101.17it/s]Loading weights:  33%|███▎      | 130/389 [00:01<00:02, 88.56it/s] Loading weights:  37%|███▋      | 143/389 [00:01<00:02, 89.77it/s]Loading weights:  41%|████      | 159/389 [00:01<00:02, 99.05it/s]Loading weights: 100%|██████████| 389/389 [00:01<00:00, 229.68it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+pooler.dense.weight       | MISSING    | 
+pooler.dense.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.

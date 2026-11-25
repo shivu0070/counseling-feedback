@@ -1,0 +1,28 @@
+{
+ "n": 1225,
+ "parse_rate": 1.0,
+ "perfect_acc": 0.92,
+ "perfect_acc_ci95": [
+  0.9055012026230345,
+  0.9335955314572968
+ ],
+ "strength_P_R_F1": [
+  0.6387,
+  0.6055,
+  0.6217
+ ],
+ "weakness_P_R_F1": [
+  0.4646,
+  0.5142,
+  0.4881
+ ],
+ "n_text_pairs": 474,
+ "feedback_BLEU": 18.332,
+ "feedback_ROUGE1": 0.4816,
+ "feedback_ROUGEL": 0.4045,
+ "feedback_BERTScore_F1": 0.9149,
+ "alternative_BLEU": 8.679,
+ "alternative_ROUGE1": 0.3508,
+ "alternative_ROUGEL": 0.2815,
+ "alternative_BERTScore_F1": 0.9037
+}
