@@ -15,6 +15,8 @@ This trial was completed in about one day (24-25 Nov 2026), so it is deliberatel
 | Goal detection gain (paired bootstrap) | +0.169 (significant) | +0.256 (significant) |
 | ESConv ROUGE-L, baseline / mix 10% | 0.392 / 0.395 | 0.439 / 0.447 |
 
+**Why these two models:** Qwen2.5-1.5B is the starter kit's default ungated model, matches the ~2B fallback the team allowed, and was cheap enough for the full sweep (mixes, original, sequential). Llama-3.2-3B is the closest Llama I could actually use: the exercise names Llama-3.1-8B, but my access to it was not approved in time (403) and the shared Modal credit (about $9 left) made an 8B fine-tune too risky. Using one model from each family also lets the comparison show whether the result depends on the model. It does not show that bigger is better, because the two were not trained identically (Llama only at mix 0 and 10%).
+
 Llama-3.2-3B reaches the higher goal-detection score and shows no significant ESConv change, but the two models' confidence intervals overlap, so "the bigger model is better" is **not** established. Everything is one greedy sample per prompt on a 110-item eval set with 20 positives; read SUMMARY.md section 5 before trusting the numbers. No Llama-3.1-8B, DPO or separate-LoRA runs were done.
 
 ## Results at a glance

@@ -11,6 +11,8 @@ This fork adds a held-out FeedbackESConv baseline, a goal-setting / homework eva
 | Goal detection bal-acc, baseline / mix 10% | 0.639 / 0.808 | 0.619 / 0.875 |
 | Goal detection gain (paired bootstrap) | +0.169 (significant) | +0.256 (significant) |
 
+**Why these two models:** Qwen2.5-1.5B is the starter kit's default ungated model, matches the ~2B fallback the team allowed, and was cheap enough for the full sweep (mixes, original, sequential). Llama-3.2-3B is the closest Llama I could actually use: the exercise names Llama-3.1-8B, but my access to it was not approved in time (403) and the shared Modal credit (about $9 left) made an 8B fine-tune too risky. Using one model from each family also lets the comparison show whether the result depends on the model. It does not show that bigger is better, because the two were not trained identically (Llama only at mix 0 and 10%).
+
 The two models' confidence intervals overlap, so "the bigger model is better" is not established. The goal data are template-composed and not expert-reviewed, so gains probably overstate real-world generalisation (SUMMARY.md section 5).
 
 ![Model comparison](model_training/bridge/results/figures/fig1_model_comparison.png)
