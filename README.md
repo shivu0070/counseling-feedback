@@ -1,3 +1,27 @@
+# BRIDGE-AI trial: goal-setting / homework feedback (fork of SALT-NLP/counseling-feedback)
+
+This fork adds a held-out FeedbackESConv baseline, a goal-setting / homework evaluation set, and mixed-SFT experiments on two small models. Everything is in [`model_training/bridge/`](model_training/bridge/); full write-up in [`SUMMARY.md`](model_training/bridge/SUMMARY.md), details and reproduction steps in the [bridge README](model_training/bridge/README.md).
+
+**Scope:** done in about one day with ~2B-class models (the exercise names Llama-3.1-8B; a ~2B fallback was allowed). Two models were trained and compared:
+
+| | Qwen2.5-1.5B-Instruct | Llama-3.2-3B-Instruct |
+|---|---|---|
+| Runs trained | held-out baseline, original (all data), mixes 2/5/10%, sequential with and without replay | held-out baseline, mix 10% |
+| ESConv perfect-acc, baseline / mix 10% | 0.904 / 0.893 (-0.011, significant) | 0.891 / 0.892 (+0.001, n.s.) |
+| Goal detection bal-acc, baseline / mix 10% | 0.639 / 0.808 | 0.619 / 0.875 |
+| Goal detection gain (paired bootstrap) | +0.169 (significant) | +0.256 (significant) |
+
+The two models' confidence intervals overlap, so "the bigger model is better" is not established. The goal data are template-composed and not expert-reviewed, so gains probably overstate real-world generalisation (SUMMARY.md section 5).
+
+![Model comparison](model_training/bridge/results/figures/fig1_model_comparison.png)
+![Mixing-ratio sweep](model_training/bridge/results/figures/fig2_mix_sweep.png)
+![Forgetting test](model_training/bridge/results/figures/fig3_forgetting.png)
+![Training loss](model_training/bridge/results/figures/fig4_training_loss.png)
+
+---
+
+*Original README of the upstream project follows.*
+
 ## Multi-Level Feedback Generation with Large Language Models for Empowering Novice Peer Counselors
 
 <p align="center">
