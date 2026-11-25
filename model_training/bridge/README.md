@@ -47,6 +47,7 @@ The full table with every metric is in [results/table.md](results/table.md) and 
 | ESConv: agreement with gold expert critique | 64 | 1.31 / 1.38 / 1.31 / 1.44 | 1.38 / 1.62 / 1.38 / 1.50 |
 
 The two passes agree closely (goal diagnosis 48/48 identical; alternative 45/48; ESConv 53/64, always within one point; weighted kappa 0.87-1.00). Caveats: both are the same model family, so this is not independence in the human-rater sense and **not** Cohen's kappa against expert labels (which the exercise asks for and I did not do); items are few (16 per run on ESConv), so ESConv differences between runs are not meaningful. Protocol, scores and details: `results/judging/` (`fresh_judge_summary.md`).
+- **Expert validation is prepared but not done.** Blinded rating sheets, expert instructions, a pre-set decision rule and the kappa script are in `expert_validation/` and `docs/expert_validation_protocol.md`; no expert has rated anything yet. Note the 48-item goal sample contains only degraded responses (no strong ones, no negative controls), so it can validate diagnosis/alternative scoring, not detection.
 
 ## Layout
 ```
@@ -65,9 +66,11 @@ bridge/
 │   ├── make_table.py       two-axis results table
 │   ├── paired_bootstrap.py paired cluster-bootstrap significance vs a baseline
 │   ├── extra_analysis.py   AUC, shortcut check, contamination check
+│   ├── judge_agreement.py  kappa + bootstrap CI between two raters (judge vs expert)
 │   └── make_figures.py     figures for this README
 ├── data/                   goal_eval_set.json (110 items), goal_train.json (116 rows)
-├── docs/                   rubric.md, POLL.md (familiarity poll)
+├── docs/                   rubric.md, expert_validation_protocol.md, POLL.md (familiarity poll)
+├── expert_validation/      blinded rating sheets (goal 48 items, ESConv 64 items) for an expert to fill in
 ├── results/
 │   ├── generations/        raw model outputs per run: <run>_esconv.json, <run>_goal.json
 │   ├── bertscore/          per-run BERTScore
@@ -75,7 +78,7 @@ bridge/
 │   ├── logs/               Modal train_* / gen_* logs per run
 │   ├── figures/            fig1-fig4 PNGs used in this README
 │   ├── table.md, text_metrics_table.md, paired_bootstrap.txt, extra_analysis.md
-└── tests/smoke_test.py     CPU plumbing check with a tiny random model (no downloads)
+└── tests/                  smoke_test.py (CPU plumbing check), test_judge_agreement.py
 ```
 
 ## Reproduce
@@ -97,6 +100,7 @@ python src/paired_bootstrap.py sft_mix0 sft_mix0.02 sft_mix0.05 sft_mix0.10    #
 python src/extra_analysis.py
 python src/make_figures.py        # -> results/figures/
 python tests/smoke_test.py
+python tests/test_judge_agreement.py
 ```
 `mix` = (#goal rows)/(#ESConv rows); the 116 goal rows are repeated to reach the ratio. Numbers in `results/` were produced by these scripts; the manual-judge files in `results/judging/` come from a blinded review done outside the repo scripts.
 
