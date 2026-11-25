@@ -36,6 +36,18 @@ All figures are drawn from `results/generations/` and `results/logs/` by `src/ma
 
 The full table with every metric is in [results/table.md](results/table.md) and SUMMARY.md section 2.
 
+## LLM-as-judge: what was and was not done
+- **No API judge was run.** `src/judge.py` (Anthropic API) exists but needs an `ANTHROPIC_API_KEY`, which I did not have, so there are no API-judge numbers.
+- **Manual judge instead:** I had Claude (in the Claude Code CLI, one reviewer, blinded to model names, though outputs are stylistically identifiable) score outputs against the rubric. Scores are 0-2 per item; columns are Qwen baseline / Qwen mix 10% / Llama baseline / Llama mix 10%.
+
+| Judged | n | Qwen base | Qwen mix 10% | Llama base | Llama mix 10% |
+|---|---|---|---|---|---|
+| Goal eval: diagnosis names the injected flaw | 48 | 0.17 | 1.50 | 0.17 | 2.00 |
+| Goal eval: quality of suggested alternative | 48 | 0.00 | 1.25 | 0.00 | 1.92 |
+| ESConv: agreement with gold expert critique | 64 | 1.31 | 1.38 | 1.31 | 1.44 |
+
+The keyword heuristic and the manual review agreed on 47/48 diagnosis items (kappa 0.96). This is agreement between two automatic raters, **not** Cohen's kappa against expert labels, which the exercise asks for and which I did not do. Treat these scores as indicative only. Files: `results/judging/`.
+
 ## Layout
 ```
 bridge/
